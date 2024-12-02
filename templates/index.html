@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>MovieRec</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>MovieRec</h1>
+            <!-- Display welcome message if the user is logged in -->
+            {% if session.get('user_username') %}
+            <div class="welcome-message">
+                Welcome, {{ session['user_username'] }}!
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+            {% else %}
+            <!-- Navigation links for Sign In / Sign Up if user is not logged in -->
+            <nav>
+                <a href="{{ url_for('auth') }}">Sign In</a> | 
+                <a href="{{ url_for('auth') }}">Sign Up</a>
+            </nav>
+            {% endif %}
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="main homepage">
+
+            <!-- Movie Recommendations Section -->
+            <div class="movie-recommendations">
+                <h2>Movie Recommendations:</h2>
+                <a href="{{ url_for('library') }}">Click here to add to your movie library</a>
+            </div>
+
+            <!-- User Statistics Section -->
+            <div class="user-stats">
+                
+                <!-- Most Watched Genres Section -->
+                <div class="most-watched-genres">
+                    <h2>Most Watched Genres:</h2>
+                    <p>1. </p>
+                    <p>2. </p>
+                    <p>3. </p>
+                    <p>4. </p>
+                    <p>5. </p>
+                </div>
+
+                <!-- Favorite Era Section -->
+                <div class="favorite-era">
+                    <h2>Most Watched Movie Era:</h2>
+                    <p> </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

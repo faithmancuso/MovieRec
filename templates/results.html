@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <!-- Page Title -->
+    <h1>Search Results</h1>
+    
+    <!-- Results List Section -->
+    <ul>
+        <!-- Loop through each movie in the search results -->
+        {% for movie in movies %}
+        <li>
+            <!-- Display the movie's title -->
+            <strong>{{ movie['title'] }}</strong>
+            
+            <!-- Display additional movie details -->
+            <p>Release Date: {{ movie['release_date'] }}</p>
+            <p>Rating: {{ movie['vote_average'] }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- Navigation Link -->
+    <a href="/search">Back to Search</a>
+</body>
+</html>

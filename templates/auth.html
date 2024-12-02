@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sign In / Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>MovieRec</h1>
+            <!-- Link to navigate back to the homepage -->
+            <a href="{{ url_for('home') }}" class="back-link">Back to Homepage</a>
+        </header>
+
+        <!-- Flash Messages Section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flash-messages">
+                <!-- Loop through flash messages and display them -->
+                {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Main Content Section -->
+        <div class="main auth-page">
+            
+            <!-- Sign In Form Section -->
+            <div class="sign-in">
+                <h2>Sign In</h2>
+                <form method="POST">
+                    <!-- Hidden input to identify Sign In submission -->
+                    <input type="hidden" name="sign_in">
+                    
+                    <!-- Username Input -->
+                    <label for="sign-in-username">Username:</label>
+                    <input type="text" id="sign-in-username" name="username" required>
+
+                    <!-- Password Input -->
+                    <label for="sign-in-password">Password:</label>
+                    <input type="password" id="sign-in-password" name="password" required>
+
+                    <!-- Submit Button -->
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form Section -->
+            <div class="sign-up">
+                <h2>Sign Up</h2>
+                <form method="POST">
+                    <!-- Hidden input to identify Sign Up submission -->
+                    <input type="hidden" name="sign_up">
+                    
+                    <!-- Username Input -->
+                    <label for="sign-up-username">Username:</label>
+                    <input type="text" id="sign-up-username" name="username" required>
+
+                    <!-- Password Input -->
+                    <label for="sign-up-password">Password:</label>
+                    <input type="password" id="sign-up-password" name="password" required>
+
+                    <!-- Submit Button -->
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

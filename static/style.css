@@ -1,0 +1,238 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.back-link, nav a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 0 10px;
+}
+
+.back-link:hover, nav a:hover {
+    text-decoration: underline;
+}
+
+.welcome-message {
+    text-align: right;
+    color: #007BFF;
+}
+
+.welcome-message a {
+    text-decoration: none;
+    color: #FF0000;
+    margin-left: 10px;
+}
+
+.welcome-message a:hover {
+    text-decoration: underline;
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-message.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Homepage Styles */
+.main.homepage {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Recommendations: 2/3, Stats: 1/3 */
+    gap: 40px;
+}
+
+/* Movie Recommendations Section */
+.movie-recommendations {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-recommendations h2 {
+    margin-top: 0;
+}
+
+.movie-recommendations a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.movie-recommendations a:hover {
+    text-decoration: underline;
+}
+
+/* User Stats Section */
+.user-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-stats div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-stats h2 {
+    margin-top: 0;
+}
+
+/* Auth Page Styles */
+.main.auth-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Sign In: 2/3 width, Sign Up: 1/3 width */
+    gap: 40px;
+}
+
+/* Sign In and Sign Up Boxes */
+.sign-in, .sign-up {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in h2, .sign-up h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Library Page Styles */
+.main.library-page {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Movie Library: 2/3 width, Add Movie: 1/3 width */
+    gap: 40px;
+}
+
+/* Movie Library and Add Movie Sections */
+.movie-library, .add-movie {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-library h2, .add-movie h2 {
+    margin-top: 0;
+}
+
+.movie-library ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.movie-library li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Movie Library Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
