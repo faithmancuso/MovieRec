@@ -33,6 +33,33 @@
             <div class="movie-recommendations">
                 <h2>Movie Recommendations:</h2>
                 <a href="{{ url_for('library') }}">Click here to add to your movie library</a>
+            
+                <!-- Table for Movie Recommendations -->
+                {% if recommendations %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Movie</th>
+                            <th>Genre</th>
+                            <th>Rating</th>
+                            <th>Release Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through each recommended movie and display its details -->
+                        {% for movie in recommendations %}
+                        <tr>
+                            <td>{{ movie.title }}</td>
+                            <td>{{ movie.genre }}</td>
+                            <td>{{ movie.rating }}</td>
+                            <td>{{ movie.release_date }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p>No recommendations available yet.</p>
+                {% endif %}
             </div>
 
             <!-- User Statistics Section -->
